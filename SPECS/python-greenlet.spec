@@ -2,7 +2,7 @@
 
 Name:           python-%{modname}
 Version:        1.1.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Lightweight in-process concurrent programming
 License:        MIT
 URL:            https://github.com/python-greenlet/greenlet
@@ -59,6 +59,10 @@ PYTHONPATH="%{buildroot}%{python3_sitearch}" %{python3} -m unittest discover gre
 %{_includedir}/python%{python3_version}*/%{modname}/
 
 %changelog
+* Tue May 09 2023 Brian C. Lane <bcl@redhat.com> - 1.1.2-4
+- Bump release for move of -devel subpackage to CRB
+  Resolves: rhbz#2149497
+
 * Wed Jun 15 2022 Sergio Correia <scorreia@redhat.com> - 1.1.2-3
 - Add python-greenlet to RHEL-9
   Resolves: rhbz#2084555
